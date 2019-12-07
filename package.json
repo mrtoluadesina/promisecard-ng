@@ -8,7 +8,7 @@
   "scripts": {
     "postinstall": "tsc",
     "build": "scripts/build.sh",
-    "start": "bin/www",
+    "start": "nodemon --exec bin/www",
     "test": "jest",
     "test:integration": "cypress run",
     "client:start": "cd client; yarn start"
