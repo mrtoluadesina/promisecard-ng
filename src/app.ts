@@ -1,3 +1,4 @@
+require('dotenv').config();
 import createError from 'http-errors';
 import express from 'express';
 import cors from 'cors';
@@ -6,6 +7,7 @@ import morgan from 'morgan';
 import graphQLHTTP from 'express-graphql';
 import path from 'path';
 import fs from 'fs';
+import mongoose from 'mongoose';
 
 import apiRouter from './routes/index';
 import schema from './schema';
@@ -14,6 +16,19 @@ const app = express();
 
 // Setup Request logging
 const logFormat = process.env.NODE_ENV === 'production' ? 'combined' : 'dev';
+
+mongoose.connect(`${process.env.ATLAS_URI}`, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+  useUnifiedTopology: true,
+});
+
+const connection = mongoose.connection;
+
+connection.once('open', () => {
+  console.log('Connection to database successfull');
+});
 
 app.use(
   morgan(logFormat, {
