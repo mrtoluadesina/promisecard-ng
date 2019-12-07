@@ -24,6 +24,12 @@ mongoose.connect(`${process.env.ATLAS_URI}`, {
   useUnifiedTopology: true,
 });
 
+const connection = mongoose.connection;
+
+connection.once('open', () => {
+  console.log('Connection to database successfull');
+});
+
 app.use(
   morgan(logFormat, {
     skip: function(_req, res) {
