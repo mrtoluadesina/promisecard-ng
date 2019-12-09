@@ -6,4 +6,44 @@ header {
   z-index: 99;
   width: 100%;
   background: #fff;
+  nav {
+    .mobile-nav {
+      display: flex;
+      position: relative;
+      width: 24px;
+      height: 12px;
+      margin-left: auto;
+      cursor: pointer;
+      z-index: 2;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $gray;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+    }
+    .web-nav {
+      display: none;
+    }
+  }
+
+  @media (min-width: $layout-breakpoint-small) {
+    nav {
+      .mobile-nav {
+        display: none;
+      }
+      .web-nav {
+        display: flex;
+      }
+    }
+  }
 }
