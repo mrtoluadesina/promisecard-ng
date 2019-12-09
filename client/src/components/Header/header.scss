@@ -1,0 +1,9 @@
+@import '../../variables';
+
+header {
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  width: 100%;
+  background: #fff;
+}
