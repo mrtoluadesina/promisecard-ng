@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import './header.scss';
 
 function Header(props) {
+  const handleDrawer = () => {
+    const sideNav = document.querySelector('.sideNav');
+    sideNav.classList.add('is-active');
+  };
+
   return (
     <header>
       <div className="logo">
@@ -12,7 +17,14 @@ function Header(props) {
         />
       </div>
       <nav>
-        <ul>
+        <span className="mobile-nav" onClick={handleDrawer}></span>
+        <ul className="web-nav">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/">Home</Link>
           </li>
