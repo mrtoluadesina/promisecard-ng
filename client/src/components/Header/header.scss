@@ -6,6 +6,17 @@ header {
   z-index: 99;
   width: 100%;
   background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  .logo {
+    width: 32px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
   nav {
     .mobile-nav {
       display: flex;
