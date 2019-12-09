@@ -5,7 +5,7 @@ export default {
     title: Joi.string()
       .required()
       .error(new Error('Gift title is required')),
-    message: Joi.string(),
+    briefDes: Joi.string(),
     promiseCardId: Joi.string()
       .required()
       .error(new Error('Promise card id is required')),
