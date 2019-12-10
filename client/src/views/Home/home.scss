@@ -15,7 +15,27 @@
     top: 2.5rem;
     padding: 1rem;
     .title {
+      font-family: 'Pacifico', cursive;
       text-align: center;
+      font-size: 24px;
+    }
+    .cta-adv {
+      border-radius: 1rem;
+      min-height: 120px;
+      width: 100%;
+      background-color: $orange;
+      background-image: url('/assets/images/person.svg');
+      background-size: 35%;
+      background-repeat: no-repeat;
+      background-position-y: 180%;
+      background-position-x: 95%;
+      margin: 1rem 0;
+      padding: 1rem;
+      h3 {
+        font-size: 16px;
+        width: 70%;
+        color: $white;
+      }
     }
   }
 
@@ -24,7 +44,10 @@
     .app {
       border-radius: 4rem 4rem 0 0;
       top: 3rem;
-      padding: 2rem;
+      padding: 2rem 3rem;
+      .title {
+        font-size: 32px;
+      }
     }
   }
 
