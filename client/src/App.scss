@@ -6,10 +6,31 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
+  background: $black;
   a {
     text-decoration: none;
     color: $black;
+  }
+  .wrapper {
+  }
+
+  @media (min-width: $layout-breakpoint-small) {
+    display: flex;
+    justify-content: center;
+    .wrapper {
+      width: 400px;
+    }
+  }
+
+  @media (min-width: $layout-breakpoint-medium) {
+    .wrapper {
+      width: 640px;
+    }
   }
 }
