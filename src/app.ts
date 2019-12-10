@@ -10,6 +10,7 @@ import fs from 'fs';
 import mongoose from 'mongoose';
 
 import apiRouter from './routes/index';
+import promiseRouter from './routes/promiseCard.routes';
 import schema from './schema';
 
 const app = express();
@@ -62,7 +63,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/api', apiRouter);
+app.use('/api/v1', apiRouter);
+app.use('/api/v1/promise', promiseRouter);
 
 app.use(
   '/graphql',
