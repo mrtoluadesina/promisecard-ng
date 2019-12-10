@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import Routes from './routes';
 import './App.scss';
 import Header from './components/Header';
@@ -9,15 +11,17 @@ import MobileMenu from './components/MobileMenu';
 function App() {
   return (
     <ErrorBoundary>
-      <Router>
-        <div className="wrapper">
-          <MobileMenu />
-          <Header />
-          <Suspense fallback={<div>Loading ...</div>}>
-            <Routes />
-          </Suspense>
-        </div>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <div className="wrapper">
+            <MobileMenu />
+            <Header />
+            <Suspense fallback={<div>Loading ...</div>}>
+              <Routes />
+            </Suspense>
+          </div>
+        </Router>
+      </Provider>
     </ErrorBoundary>
   );
 }
