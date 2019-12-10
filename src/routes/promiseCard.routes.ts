@@ -1,7 +1,7 @@
 import express from 'express';
 
 //Controllers
-import { create } from '../controllers/promisecard.controller';
+import { createPromise } from '../controllers/promisecard.controller';
 
 const router = express.Router();
 
@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   try {
-    const response = await create(req.body);
+    const response = await createPromise(req.body);
     const { status, message, payload } = response;
 
     return res.status(status).json({ statusCode: status, message, payload });
