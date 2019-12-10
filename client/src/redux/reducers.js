@@ -1,5 +1,9 @@
 import { combineReducers } from 'redux';
 
-const rootReducer = combineReducers({});
+import PromiseCardReducer from '../views/Home/redux/reducer';
+
+const rootReducer = combineReducers({
+  card: PromiseCardReducer,
+});
 
 export default rootReducer;
