@@ -17,7 +17,7 @@ function Header(props) {
       </div>
       <nav>
         <span className="mobile-nav" onClick={handleDrawer}>
-          <i class="mdi mdi-sort-variant"></i>
+          <i className="mdi mdi-sort-variant"></i>
         </span>
       </nav>
     </header>
