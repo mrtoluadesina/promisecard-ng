@@ -11,6 +11,7 @@ import mongoose from 'mongoose';
 
 import apiRouter from './routes/index';
 import promiseRouter from './routes/promiseCard.routes';
+import accountRouter from './routes/account.routes';
 import schema from './schema';
 
 const app = express();
@@ -65,6 +66,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/v1', apiRouter);
 app.use('/api/v1/promise', promiseRouter);
+app.use('/api/v1/account', accountRouter);
 
 app.use(
   '/graphql',
