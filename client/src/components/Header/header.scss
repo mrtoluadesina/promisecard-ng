@@ -2,10 +2,21 @@
 
 header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
   z-index: 99;
-  width: 100%;
-  background: #fff;
+  background: $white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  .logo {
+    width: 32px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
   nav {
     .mobile-nav {
       display: flex;
@@ -15,34 +26,8 @@ header {
       margin-left: auto;
       cursor: pointer;
       z-index: 2;
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: $gray;
-      }
-      &::before {
-        top: 0;
-      }
-      &::after {
-        bottom: 0;
-      }
-    }
-    .web-nav {
-      display: none;
-    }
-  }
-
-  @media (min-width: $layout-breakpoint-small) {
-    nav {
-      .mobile-nav {
-        display: none;
-      }
-      .web-nav {
-        display: flex;
+      i {
+        font-size: 24px;
       }
     }
   }

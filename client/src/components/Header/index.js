@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './header.scss';
 
 function Header(props) {
@@ -17,18 +16,9 @@ function Header(props) {
         />
       </div>
       <nav>
-        <span className="mobile-nav" onClick={handleDrawer}></span>
-        <ul className="web-nav">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
+        <span className="mobile-nav" onClick={handleDrawer}>
+          <i class="mdi mdi-sort-variant"></i>
+        </span>
       </nav>
     </header>
   );
