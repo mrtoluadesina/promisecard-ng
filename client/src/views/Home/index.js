@@ -1,5 +1,6 @@
 import React from 'react';
 import './home.scss';
+import PromiseCardApp from './PromiseCardApp';
 
 function Home(props) {
   return (
@@ -9,6 +10,7 @@ function Home(props) {
         <div className="cta-adv">
           <h3>Who is gifting me something this christmas?</h3>
         </div>
+        <PromiseCardApp />
       </div>
     </section>
   );
