@@ -4,7 +4,7 @@ import { GiftObjectType } from '../types/giftTypes';
 
 import { PromiseObjType, CreatePromiseReturnType } from '../types/promisecard';
 
-export async function create(
+export async function createPromise(
   promise: PromiseObjType,
 ): Promise<CreatePromiseReturnType> {
   try {
@@ -38,7 +38,7 @@ export async function create(
   } catch (error) {
     return {
       status: 500,
-      message: 'An error occured. Please try again',
+      message: 'An error occurred. Please try again',
       error: error.message,
     };
   }
