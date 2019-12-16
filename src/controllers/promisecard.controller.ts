@@ -11,9 +11,9 @@ export async function createPromise(
     if (!promise) {
       return { status: 400, message: 'No payload sent' };
     }
-    const { title, userId, gifts, link } = promise;
+    const { title, userId, gifts } = promise;
 
-    let promiseCard = new Promise({ title, userId, link });
+    let promiseCard = new Promise({ title, userId });
 
     let giftResponse: GiftObjectType[] = [];
 
